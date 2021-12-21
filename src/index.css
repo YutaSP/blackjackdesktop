@@ -1,0 +1,191 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  margin: auto;
+  max-width: auto;
+  padding: 2rem;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Initial styling for the whole body*/
+body {
+  height: 100vh;
+  background-color: #c9c9c9;
+  font-family: "Prompt", sans-serif;
+}
+
+/*reintroducing font family since my test browser would not allow button to receive parent style for font*/
+a,
+button {
+  font-family: "Prompt", sans-serif;
+}
+
+.dropdown {
+  height: 10vh;
+  width: 60%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.projects,
+.about {
+  position: relative;
+}
+
+/*This portion styles the lists that are hidden but this is also where i hide the list that pops out when button is clicked */
+.projects ul,
+.about ul {
+  margin-top: 10px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background: white;
+  left: 0px;
+  list-style: none;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.projects li,
+.about li {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.projects li:hover::before,
+.about li:hover::before {
+  background-color: #c5adb5;
+}
+
+.projects a,
+.about a {
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown button,
+.home {
+  background: none;
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* This is where i reintroduce the list with visibility*/
+.projects button:focus + ul,
+.about button:focus + ul {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.howTo {
+  text-align: center;
+  margin: auto;
+}
+
+.howTo h1 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.howTo p {
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+
+.howTo h4 {
+  padding-top: 10px;
+  padding-bottom: 25px;
+  font-size: 80px;
+}
+
+/*This is where I set up all the cards. 
+Would've hidden the check marks behind the image, however that is not user friendly and also does not look good when browser is not maximized*/
+.cards {
+  background-color: #494747;
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  color: white;
+  font-size: 45px;
+  display: center;
+}
+
+.cards img {
+  width: auto;
+  height: 100px;
+}
+
+.cards .dONE {
+  color: white;
+  font-size: 20px;
+}
+
+/*Styling the statistics of drowing certain cards. */
+#answer {
+  font-size: 20px;
+}
+
+#answer li {
+  list-style: none;
+  float: left;
+  margin: 10px;
+  border: 2.5px solid #2c2c2c;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+/*This is where I control if the reset button is visible to the eyes or not with javascript.
+if this is not integrated with javascript, the reset button will not act correctly. 
+also the script changes class itself and removes class attribute till refresh.*/
+.resets {
+  display: none;
+}
+
+.reset.active {
+  display: block;
+}
+/*# sourceMappingURL=art.css.map */
