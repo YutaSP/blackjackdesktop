@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="./cheating.js" defer></script>
+  </head>
+  <body>
+    <!-- nav framework i usually use, same for any other html i have it linked here locally. -->
+    <nav>
+      <div class="dropdown">
+        <button><a href="./index.html" class="home">Home</a></button>
+        <div class="projects">
+          <button>Projects</button>
+          <ul>
+            <li><a href="./index.html">BlackJack</a></li>
+            <li><a href="./placeHolder.html">FlapBird</a></li>
+            <li><a href="./placeHolder.html">Calendar App</a></li>
+            <li><a href="./placeHolder.html">Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="about">
+          <button>About</button>
+          <ul>
+            <li><a href="./about.html">This Project</a></li>
+            <li><a href="./placeHolder.html">Author</a></li>
+            <li><a href="./placeHolder.html">Source/Github</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="howTo">
+      <header>
+        <h1>BlackJack Card Counting</h1>
+      </header>
+      <p>
+        Please click cards that has been played at this moment. After clicking
+        on the cards played, please hit "Done" at the bottom. The answer will
+        appear below.
+      </p>
+    </div>
+    <!-- made multiple class and id so i can select it in js. Also so i can pull state of the check marks in form. -->
+    <div class="cards" id="cards">
+      <form id="deck" class="deck">
+        <label
+          ><img src="./img/AC.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="1"
+        /></label>
+        <label
+          ><img src="./img/2C.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="2"
+        /></label>
+        <label
+          ><img src="./img/3C.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="3"
+        /></label>
+        <label
+          ><img src="./img/4C.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="4"
+        /></label>
+        <label
+          ><img src="./img/5C.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="5"
+        /></label>
+        <label
+          ><img src="./img/6C.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="6"
+        /></label>
+        <label
+          ><img src="./img/7C.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="7"
+        /></label>
+        <label
+          ><img src="./img/8C.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="8"
+        /></label>
+        <label
+          ><img src="./img/9C.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="9"
+        /></label>
+        <label
+          ><img src="./img/10C.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="10"
+        /></label>
+        <label
+          ><img src="./img/JC.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="11"
+        /></label>
+        <label
+          ><img src="./img/QC.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="12"
+        /></label>
+        <label
+          ><img src="./img/KC.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="13"
+        /></label>
+        <br />
+        <label
+          ><img src="./img/AD.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="1"
+        /></label>
+        <label
+          ><img src="./img/2D.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="2"
+        /></label>
+        <label
+          ><img src="./img/3D.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="3"
+        /></label>
+        <label
+          ><img src="./img/4D.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="4"
+        /></label>
+        <label
+          ><img src="./img/5D.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="5"
+        /></label>
+        <label
+          ><img src="./img/6D.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="6"
+        /></label>
+        <label
+          ><img src="./img/7D.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="7"
+        /></label>
+        <label
+          ><img src="./img/8D.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="8"
+        /></label>
+        <label
+          ><img src="./img/9D.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="9"
+        /></label>
+        <label
+          ><img src="./img/10D.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="10"
+        /></label>
+        <label
+          ><img src="./img/JD.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="11"
+        /></label>
+        <label
+          ><img src="./img/QD.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="12"
+        /></label>
+        <label
+          ><img src="./img/KD.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="13"
+        /></label>
+        <br />
+        <label
+          ><img src="./img/AH.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="1"
+        /></label>
+        <label
+          ><img src="./img/2H.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="2"
+        /></label>
+        <label
+          ><img src="./img/3H.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="3"
+        /></label>
+        <label
+          ><img src="./img/4H.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="4"
+        /></label>
+        <label
+          ><img src="./img/5H.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="5"
+        /></label>
+        <label
+          ><img src="./img/6H.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="6"
+        /></label>
+        <label
+          ><img src="./img/7H.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="7"
+        /></label>
+        <label
+          ><img src="./img/8H.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="8"
+        /></label>
+        <label
+          ><img src="./img/9H.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="9"
+        /></label>
+        <label
+          ><img src="./img/10H.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="10"
+        /></label>
+        <label
+          ><img src="./img/JH.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="11"
+        /></label>
+        <label
+          ><img src="./img/QH.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="12"
+        /></label>
+        <label
+          ><img src="./img/KH.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="13"
+        /></label>
+        <br />
+        <label
+          ><img src="./img/AS.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="1"
+        /></label>
+        <label
+          ><img src="./img/2S.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="2"
+        /></label>
+        <label
+          ><img src="./img/3S.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="3"
+        /></label>
+        <label
+          ><img src="./img/4S.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="4"
+        /></label>
+        <label
+          ><img src="./img/5S.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="5"
+        /></label>
+        <label
+          ><img src="./img/6S.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="6"
+        /></label>
+        <label
+          ><img src="./img/7S.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="7"
+        /></label>
+        <label
+          ><img src="./img/8S.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="8"
+        /></label>
+        <label
+          ><img src="./img/9S.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="9"
+        /></label>
+        <label
+          ><img src="./img/10S.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="10"
+        /></label>
+        <label
+          ><img src="./img/JS.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="11"
+        /></label>
+        <label
+          ><img src="./img/QS.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="12"
+        /></label>
+        <label
+          ><img src="./img/KS.jpg" /><input
+            type="checkbox"
+            class="checks"
+            value="13"
+        /></label>
+        <br />
+        <button id="done" class="done" type="submit">Done</button>
+      </form>
+      <!-- this button is hidden which it's class is changed later on to reveal once the document is changed with answers. -->
+      
+      <br />
+    </div>
+    <!-- javascript will write stats here.  -->
+    
+  </body>
+</html>
